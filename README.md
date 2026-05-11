@@ -1,0 +1,2 @@
+This project is a web-based complaint management system where citizens can report public problems such as road damage, garbage issues, water leakage, and street light failures. The complaints are stored in CSV format and organized area-wise for analysis and reporting to local agencies.
+The main objective is to provide an easy online platform for citizens to report public issues and help authorities analyze complaints area-wise for faster resolution.
