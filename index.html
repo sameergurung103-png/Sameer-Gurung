@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Submit Complaint</title>
+</head>
+<body>
+    <h2>Submit a Complaint</h2>
+
+    <form action="/submit" method="POST">
+        <label>Name:</label><br>
+        <input type="text" name="name" required><br><br>
+
+        <label>Area:</label><br>
+        <input type="text" name="area" required><br><br>
+
+        <label>Problem Type:</label><br>
+        <select name="problem_type" required>
+            <option value="">-- Select --</option>
+            <option value="Water">Water</option>
+            <option value="Electricity">Electricity</option>
+            <option value="Roads">Roads</option>
+            <option value="Sanitation">Sanitation</option>
+            <option value="Other">Other</option>
+        </select><br><br>
+
+        <label>Description:</label><br>
+        <textarea name="description" rows="4" cols="40" required></textarea><br><br>
+
+        <button type="submit">Submit Complaint</button>
+    </form>
+
+    <br><br>
+    <a href="/dashboard">View Dashboard</a>
+    <br><br>
+    <a href="/search">Search Complaints</a>
+
+</body>
+</html>

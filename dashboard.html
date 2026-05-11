@@ -1,0 +1,28 @@
+<DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+</head>
+<body>
+    <h2>Area-wise Complaint Dashboard</h2>
+
+    <table border="1" cellpadding="10">
+        <tr>
+            <th>Area</th>
+            <th>Total Complaints</th>
+            <th>Export</th>
+        </tr>
+
+        {% for area, count in area_counts.items() %}
+        <tr>
+            <td>{{ area }}</td>
+            <td>{{ count }}</td>
+            <td><a href="/export/{{ area }}">Download Report</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <br>
+    <a href="/search">Search by Area</a>
+</body>
+</html>

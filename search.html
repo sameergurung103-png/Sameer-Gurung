@@ -1,0 +1,35 @@
+<html>
+<head>
+    <title>Search Complaint</title>
+</head>
+<body>
+    <h2>Search Complaints by Area</h2>
+
+    <form method="POST">
+        <input type="text" name="area" placeholder="Enter area name" required>
+        <button type="submit">Search</button>
+    </form>
+
+    {% if complaints %}
+        <h3>Complaints in {{ search_area }}</h3>
+        <table border="1" cellpadding="10">
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Problem</th>
+                <th>Description</th>
+                <th>Date</th>
+            </tr>
+            {% for c in complaints %}
+            <tr>
+                <td>{{ c.Complaint_ID }}</td>
+                <td>{{ c.Name }}</td>
+                <td>{{ c.Problem_Type }}</td>
+                <td>{{ c.Description }}</td>
+                <td>{{ c.Date_Time }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    {% endif %}
+</body>
+</html>
